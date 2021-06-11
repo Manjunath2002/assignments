@@ -1,0 +1,62 @@
+<!doctype>
+	<html>
+	<head>
+		<title>RADIO,CHECKBOX</title>
+	</head>
+	<body>
+		<form>
+			<br/>
+
+			<label for="gender">Gender</label><br/>
+			<input type="radio" name="gender" id="gender" value="male">Male<br/>
+			<input type="radio" name="gender" id="gender" value="female">Female<br/>
+			<button  type="button" onclick="displayRadioValue()">submit</button><br/><br/>
+            <p id="result"></p>
+
+			<br/>
+
+			<input type="checkbox" id="cricket"  value="cricket"/>  
+			<label for="cricket">Cricket</label> <br>
+			<input type="checkbox" id="football"value="football"/>  
+			<label for="football">Football</label> <br> 
+
+			<button type="button" onclick="check()">Button</button><br/><br/>
+			<p1 id="man"></p1>
+
+    <script>
+        function displayRadioValue() {…
+[09:39, 6/11/2021] +91 98661 35036: <!DOCTYPE html>
+<html>
+   <head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+	  p {
+			color: red;
+		}
+	</style>
+  </head>
+  <body>
+    <label>Choose your studies</label>
+    <select id="studies">
+    	     <option>--select--</option>
+    	     <option>Btech</option>
+    	     <option>Degree</option>
+    	     <option>MBPS</option>
+    	     <option>Law student</option>
+    	     <option>Fashion Designing</option>
+    	     <option>Hotel Management</option>
+    </select>
+    <button onclick="readData()">submit</button>
+    <p id="result"></p>
+    <script>
+    	function readData() {
+    		var c=document.getElementById('studies').value;
+
+    		document.getElementById('result').innerHTML=c;
+
+    	}
+    </script>
+    </body>
+</html>
+
