@@ -1,0 +1,16 @@
+	<!DOCTYPE html>
+<html>
+	<head>
+		<title>Name on Canvas</title>
+	</head>
+	<body>
+		<canvas id="c1" width="300" height="100" style="border:3px solid black">
+		</canvas>
+		<script>
+			var c=document.getElementById('c1');
+			cursor=c.getContext('2d');
+			cursor.font="30px italian";
+			cursor.strokeText("Manjunath",10,50);
+		</script>
+	</body>
+</html>
