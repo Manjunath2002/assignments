@@ -2,8 +2,8 @@
 	$name=$_POST['name'];
 	$emailid=$_POST['emailid'];
 
-	$server="localhost:3306";
-	$dbname="web-dev";
+	$server="localhost:1221.1.1";
+	$dbname="ass7";
 	$username="root";
 	$password="";
 
