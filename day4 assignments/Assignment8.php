@@ -11,8 +11,8 @@
 			</tr>
 		<?php
 		
-			$server="localhost:3306";
-			$dbname="web-dev";
+			$server="localhost:1221.1.1";
+			$dbname="ass8";
 			$username="root";
 			$password="";
 
