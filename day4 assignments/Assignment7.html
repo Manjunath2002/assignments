@@ -1,29 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>TO add details into database</title>
-</head>
-<body>
-	<h1>Contact details</h1>
-	<form action="Assignment7.php" method="POST"
-	target="_blank">
-		<label style="color:red" "font-size: 30px;">Enter your name:</label>
-		<input type="text" name="name" placeholder="enter name" id="name"/>
-		<br/><br/>
-		<label style="color:red" "font-size: 30px;">Enter your name:</label>
-		<input type="email" name="emailid" placeholder="enter email id" id="emailid"/>
-		<br/><br/>
-		<input type="submit" />
+<!doctype>
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>subscription page</title>
+	</head>
+	<body>
+		<form action="/html/back.php" method="post">
+	   <label>enter name:</label>
+	   <input type="text"  id="name" name="name"/><br/><br/>
+	   <label>enter email id:</label>
+	   <input type="email" id="email" name="email"/><br/>
+	   <!--<input type="image" id="image" name="image"/>-->
+	   <input type="submit">
 	</form>
-	<script>
-		function getData() {
-			var name=document.getElementById('name').value;
-			var emailid=document.getElementById('emailid').value;
-
-			var dataString='Name:' + name + 'Emailid:' + emailid ;
-			document.getElementById('result').innerHTML=dataString;
-		}
-	</script>
-</body>
-</html>
+	</body>
+	</html>
