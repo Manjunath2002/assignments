@@ -1,37 +1,30 @@
 <?php
-	$name=$_POST['name'];
-	$emailid=$_POST['emailid'];
+    
+   $name=$_POST['name'];
+   $email=$_POST['email'];
+   //$image=$_POST['image'];
 
-	$server="localhost:3306";
-	$dbname="ass7";
-	$username="root";
-	$password="";
 
-	$sFlag=0;
+    //echo $name;
+    //echo $email;
+    //echo $image;
+    $server="localhost:3306";
+    $username="root";
+    $password="";
+    $dbname="back";
 
-	$conn=mysqli_connect($server,$username,$password,$dbname);
-	if(!$conn) {
-		echo 'Server Connection Failure';
-		$sFlag=0;
-	} else {
-		echo 'Server Connection Authorised';
-		$sFlag=1;
-	}
-	echo '<br/>';
+    $conn=mysqli_connect($server,$username,$password,$dbname);
+    if(!$conn) {
+    	echo 'connection failure';
+    }
 
-	if($sFlag==1) {
+    $sql="INSERT INTO info (name,email) values ('".$name."','".$email."')";
+    
+    $response=mysqli_query($conn,$sql);
+    if($response) {
+    	echo 'data stored successfully';
+    } else {
+    	echo 'not stored';
+    }
 
-		
-		$sql="INSERT INTO contact_form (name,email) VALUES('".$name."','".$emailid."');";
-
-	
-		$a=mysqli_query($conn,$sql);
-
-		if($a) {
-			echo "Data Inserted Successfully";
-		} else {
-			echo $conn->error;
-		}
-	}
 ?>
-
