@@ -1,41 +1,37 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Tech Support Table</title>
-	</head>
-	<body>
-		<table border="1">
-			<tr>
-				<th>Name</th>
-				<th>Email ID</th>
-			</tr>
-		<?php
-		
-			$server="localhost:1221.1.1";
-			$dbname="ass8";
-			$username="root";
-			$password="";
+<?php
+   	
+      $server="localhost";
+      $username="root";
+      $password="";
+      $dbname="back";
 
-			$conn=mysqli_connect($server,$username,$password,$dbname);	
-			if(!$conn) {
-				echo 'Connection Failure';
-			}
+      $conn=mysqli_connect($server,$username,$password,$dbname);
+      if(!$conn) {
+      	echo 'connection failure';
+    
+      }
+      $sql="SELECT * from info";
 
-			$sql="SELECT * FROM contact_form";
+      $data=mysqli_query($conn,$sql);
 
-			$data=mysqli_query($conn,$sql);
-			if(mysqli_num_rows($data)>0) {
-				while($row=mysqli_fetch_assoc($data)) {
-		?>
-					<tr>
-						<!--<td><?php echo $row['id'];?></td>-->
-						<td><?php echo $row['name'];?></td>
-						<td><?php echo $row['email'];?></td>
-					</tr>
-		<?php			
-				}
-			}
-		?>
-	</table>
-	</body>
+      if(mysqli_num_rows($data)>0) 
+      {
+
+      	while($row=mysqli_fetch_assoc($data)) {
+      		?>
+      		<tr>
+      			<td><?php echo $row['id'];?></td>
+      			<td><?php echo $row['name'];?></td>
+      			<td><?php echo $row['email'];?></td>
+      		</tr>
+          <?php 
+      	}
+     
+      }
+
+
+   	?>
+
+   </table>
+</body>
 </html>
